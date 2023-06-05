@@ -33,8 +33,8 @@
           </li>
           <li class="user-menu__item">
             <a class="user-menu__link" href="#">
+              <span class="visually-hidden">Избранное</span>
               <span class="user-menu__text">12</span>
-              <span class="visually-hidden">Лайки</span>
             </a>
           </li>
           <li class="user-menu__item">
@@ -46,7 +46,7 @@
       </div>
     </header>
     <main class="page-catalog">
-      <section class="page-catalog__search-hotel search-hotel">
+      <div class="page-catalog__search-hotel search-hotel">
         <h1 class="search-hotel__title">Гостиницы Седоны</h1>
         <ol class="search-hotel__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item">
@@ -58,8 +58,11 @@
             <a class="breadcrumbs__link" href="catalog.html">Гостиницы</a>
           </li>
         </ol>
-        <form class="page-catalog__filters filters" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="filters__form">
+      </div>
+      <section class="page-catalog__filters filters">
+        <h2 class="visually-hidden">Поиск отелей</h2>
+        <form class="filters__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filters__fields">
             <legend class="filters__title">Инфраструктура:</legend>
             <ul class="filters__list">
               <li class="filters__item">
@@ -155,7 +158,7 @@
             <p class="card__price">От 4000 ₽</p>
             <a class="card__detailed" href="#">Подробнее</a>
             <button class="card__favourites" type="button">В избранное</button>
-            <p class="card__stars card__stars--stars-4">
+            <p class="card__stars stars stars--stars-four">
               <span class="visually-hidden">4 звезды</span>
             </p>
             <p class="card__rating">Рейтинг: 8,5</p>
@@ -172,7 +175,7 @@
             <p class="card__price">От 5000 ₽</p>
             <a class="card__detailed" href="#">Подробнее</a>
             <button class="card__favourites" type="button">В избранном</button>
-            <p class="card__stars card__stars--stars-4">
+            <p class="card__stars stars stars--stars-four">
               <span class="visually-hidden">4 звезды</span>
             </p>
             <p class="card__rating">Рейтинг: 9,2</p>
@@ -189,7 +192,7 @@
             <p class="card__price">От 2500 ₽</p>
             <a class="card__detailed" href="#">Подробнее</a>
             <button class="card__favourites" type="button">В избранное</button>
-            <p class="card__stars card__stars--stars-3">
+            <p class="card__stars stars stars--stars-three">
               <span class="visually-hidden">3 звезды</span>
             </p>
             <p class="card__rating">Рейтинг: 6,9</p>
@@ -206,7 +209,7 @@
             <p class="card__price">От 1500 ₽</p>
             <a class="card__detailed" href="#">Подробнее</a>
             <button class="card__favourites" type="button">В избранное</button>
-            <p class="card__stars card__stars--stars-2">
+            <p class="card__stars stars stars--stars-two">
               <span class="visually-hidden">2 звезды</span>
             </p>
             <p class="card__rating">Рейтинг: 5,0</p>
@@ -247,7 +250,7 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__socials socials">
-        <h2 class="visually-hidden">Сониальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy">
