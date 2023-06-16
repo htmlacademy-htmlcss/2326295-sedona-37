@@ -11,8 +11,7 @@
   <body>
     <header class="page-header container">
       <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image" src="images/logo.svg" width="140" height="70" alt="Логотип города Седоны."
-          aria-current="page">
+        <img class="logo__image" src="images/logo.svg" width="140" height="70" alt="Логотип города Седоны.">
       </a>
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
@@ -35,7 +34,7 @@
         </li>
         <li class="user-menu__item">
           <a class="user-menu__link-favourites link-favourites" href="#">
-            <span class="visually-hidden">Избранное</span>
+            <span class="visually-hidden">Добавлено объектов в избранное</span>
             <span class="user-menu__text">12</span>
           </a>
         </li>
@@ -97,7 +96,7 @@
                 <li class="filters__item">
                   <label class="filters__label" for="apartments">
                     <input class="filters__input" type="radio" value="apartments" name="type-house"
-                      id="apartments">Аппартаменты
+                      id="apartments">Апартаменты
                   </label>
                 </li>
               </ul>
@@ -106,12 +105,11 @@
               <legend class="filters__title">Стоимость, ₽:</legend>
               <ul class="filters__list">
                 <li class="filters__item">
-                  <label class="filters__label">от
-                    <input class="filters__input" type="number" name="min-price" value="0">
+                  <label for="min-price" class="filters__label filters__label--before-after">от
+                    <input class="filters__input" type="number" name="min-price" id="min-price" value="0">
                   </label>
-                  <label class="filters__label">до
-                    <input class="filters__input" type="number" name="max-price" value="9000">
-                  </label>
+                  <label for="max-price" class="filters__label filters__label--before-after">до</label>
+                  <input class="filters__input" type="number" name="max-price" id="max-price" value="9000">
                 </li>
               </ul>
             </fieldset>
@@ -219,19 +217,19 @@
             <a class="pagination__link pagination__link--active" aria-current="page">1</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--2" href="#">2</a>
+            <a class="pagination__link" href="#">2</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--3" href="#">3</a>
+            <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--4" href="#">4</a>
+            <a class="pagination__link" href="#">4</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link pagination__link--ellipsis" href="#">...</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--10" href="#">10</a>
+            <a class="pagination__link" href="#">10</a>
           </li>
         </ul>
       </section>
@@ -240,10 +238,9 @@
         <p class="subscribe__description subscribe__description--catalog">Только полезная информация и никакого спама,
           честное бойскаутское!</p>
         <form class="subscribe__form" action="#" method="post">
-          <label for="subscribe__search" class="subscribe__label">
-            <input class="subscribe__input" id="subscribe__search" name="search" type="text" placeholder="Ваш e-mail"
-              required>
-          </label>
+          <label for="subscribe__search" class="visually-hidden">Ваш e-mail</label>
+          <input class="subscribe__input" id="subscribe__search" name="search" type="text" placeholder="Ваш e-mail"
+            required>
           <button class="subscribe__button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -258,8 +255,8 @@
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__lin socials__lin--telegramm" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграмм</span>
+            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="socials__item">
@@ -277,7 +274,7 @@
         <h2 class="visually-hidden">Копирайт</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/">
           <img class="copyright__image" src="images/logo-html-academy.svg" width="115" height="33"
-            alt="логоитп htmlacademy.">
+            alt="логотип htmlacademy.">
         </a>
       </section>
     </footer>
