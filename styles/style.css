@@ -18,25 +18,32 @@
   --main-font: "PT Sans", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
 
 body {
+  margin: 0;
+  height: 100%;
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color:#F2F2F2;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
   margin: 0 auto;
+  min-height: 100%;
   background-color: #FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -54,8 +61,31 @@ body {
 
 /* header */
 
+.page-header {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.logo {
+  width: 140px;
+  margin-right: 30px;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  min-width: 339px;
+  margin-right: 285px;
+}
+
 .navigation__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation__link {
@@ -64,10 +94,22 @@ body {
   color: #000000;
   text-decoration: none;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
 }
 
 .user-menu {
   list-style: none;
+  min-width: 268px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .link-favourites {
@@ -132,7 +174,15 @@ body {
 
 .advantages__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+/* .advantages__item {
+
+} */
 
 .advantages__subtitle {
   font-weight: 700;
@@ -191,11 +241,15 @@ body {
 
 .service__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .service__item {
   background-repeat: no-repeat;
   padding: 81px 85px;
+  min-width: 400px;
 }
 
 .service__item--housing {
@@ -257,7 +311,7 @@ body {
 }
 
 .subscribe__input {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
@@ -265,7 +319,7 @@ body {
 }
 
 .subscribe__button {
-  font-family: var(--main-font);
+  font-family: inherit;
   background-color: #82B3D3;
   color: #FFFFFF;
   font-weight: 700;
@@ -277,23 +331,95 @@ body {
 
 /* footer */
 
-/* .socials__list {
-  list-style: none;
-} */
+.page-footer {
+  margin: 0;
+  padding:  40px 70px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__socials {
+  margin: 0;
+  padding: 0;
+  min-width: 142px;
+}
+
+.page-footer__phone {
+  margin: 0;
+  padding: 0;
+  min-width: 720px;
+}
 
 .phone {
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
+  min-width: 720px;
+}
+
+.copyright {
+  margin: 0;
+  width: 115px;
 }
 
 /* catalog */
+
+.page-catalog__search-hotel {
+  margin: 0;
+  padding: 70px;
+  padding-top: 35px;
+}
+
+.filters__form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__list {
+  margin: 0;
+  padding: 0;
+}
+
+.filters__button-goup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filters__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-hotel {
+  margin: 0;
+  padding: 50px 70px 60px;
+}
+
+.catalog-hotel__header {
+  display: flex;
+  margin: 0;
+}
+
+.catalog-hotel__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 0;
+  list-style: none;
+}
 
 .search-hotel {
   background-image: url("../images/background-filters.jpg");
   background-repeat: no-repeat;
   background-color: rgb(30, 61, 100);
+  background-size: cover;
 }
 
 .search-hotel__title {
@@ -324,7 +450,7 @@ color: #FFFFFF;
 }
 
 .filters__input {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -338,11 +464,13 @@ color: #FFFFFF;
 }
 
 .filters__button {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #FFFFFF;
+  border: none;
+
 }
 
 .filters__button--apply {
@@ -350,6 +478,7 @@ color: #FFFFFF;
 }
 
 .filters__button--throw-off {
+  background-color: transparent;
 }
 
 .catalog-hotel__title {
@@ -357,6 +486,7 @@ color: #FFFFFF;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-hotel__sorting {
@@ -364,10 +494,25 @@ color: #FFFFFF;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  margin: 0;
+  margin-left: 200px;
 }
 
-.catalog-hotel__card {
-  list-style: none;
+.catalog-hotel__view {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  min-width: 160px;
+}
+
+.card__item {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  width: 340px;
+  margin-bottom: 20px;
 }
 
 .card__link {
@@ -392,7 +537,7 @@ color: #FFFFFF;
 }
 
 .card__favourites {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -408,7 +553,7 @@ color: #FFFFFF;
 }
 
 .card__favourites--color {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -433,15 +578,28 @@ color: #FFFFFF;
   color: #333333;
 }
 
-.pagination__item {
-list-style: none;
+.catalog-hotel__pagination {
+  display: flex;
+  width: 1060px;
+  margin: 40px 0 60px;
+  padding: 0;
 }
 
-.pagination__link--active {
-  color: #000000;
+.pagination__item {
+list-style: none;
+margin: 0;
+padding: 0;
+margin-right: 8px;
+}
+
+.pagination__item:last-child {
+  margin-right: 0;
 }
 
 .pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -449,6 +607,15 @@ list-style: none;
   color:#FFFFFF;
   background-color:#82B3D3;
   text-decoration: none;
+  margin: 0;
+  padding: 0 12px;
+  min-width: 60px;
+  height: 60px;
+}
+
+.pagination__link--active {
+  color: #000000;
+  background-color: #F2F2F2;
 }
 
 .pagination__link--ellipsis{
@@ -456,5 +623,4 @@ list-style: none;
   line-height: 26px;
   color: #000000;
   background-color: #FFFFFF;
-
 }
